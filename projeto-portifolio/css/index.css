@@ -1,0 +1,246 @@
+@import "global.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--gray-500);
+    margin: 0;
+    font-family: var();
+    font-size: 16px;
+}
+
+header {
+    background-image: url(../assets/background-intro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: var(--font-size-title-lg);
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: var(--font-size-subtitle);
+    font-family: var(--font-family-subtitle);
+    font-weight: var(--font-weight-regular);
+}
+
+p {
+    font-size: var(--font-size-text-sm);
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-regular);
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    border: solid 2px var(--color-red);
+    width: 112px;
+    height: 112px;
+    padding: .25rem;
+    margin-bottom: 3rem;
+
+    & img:nth-child(1) {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    & img:nth-child(2) {
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.mt-2 {
+    margin-top: .5rem;
+}
+
+.mt-12 {
+    margin-top: .5rem;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 80px;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gray-400);
+    gap: .25rem;
+    padding: .35rem .875rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: var(--font-family-subtitle);
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+
+    & h3 {
+        font-size: 1.5rem;
+        font-family: var(--font-family-title);
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 0 auto;
+    margin: 5rem 0rem;
+
+    & h3 {
+        font-size: var(--font-size-text-sm);
+        font-family: var(--font-family-title);
+        font-weight: var(--font-weight-bold);
+    }
+
+    & .card {
+        background: var(--gray-400);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: start;
+    }
+
+    & img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+
+#especs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--gray-600);
+    padding: 3rem 0rem;
+
+    & h3 {
+        font-size: 1.5rem;
+        font-family: var(--font-family-title);
+        font-weight: var(--font-weight-bold);
+    }
+
+    & .card {
+        background: var(--gray-500);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: start;
+        border: solid 1px var(--gray-400);
+    }
+
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin: 0 auto;
+        margin: 5rem 0rem;
+
+
+        & h3 {
+            font-size: var(--font-size-text-sm);
+            font-family: var(--font-family-title);
+            font-weight: var(--font-weight-bold);
+        }
+    }
+}
+
+.mt-5 {
+    margin-top: 1.25rem;
+}
+
+footer {
+    background-image: url(../assets/Background_Contacts.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 8rem 0rem;
+
+    & h1 {
+        font-size: 1.5rem;
+    }
+
+    & .social {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        margin: 3rem auto;
+    }
+
+    & .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: var(--gray-400);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        min-width: 400px;
+        gap: 1rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        text-decoration: none;
+    }
+
+    & .card:hover {
+        transform: scale(1.05);
+    }
+}

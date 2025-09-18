@@ -1,0 +1,84 @@
+:root {
+    /*
+  |--------------------------------------------------------------------------
+  | CORES
+  |--------------------------------------------------------------------------
+  */
+
+    /** CORES PRINCIPAIS
+   * Usadas para botões, links, destaques e elementos de ação.
+   */
+    --color-red: #E3646E;
+    --color-purple: #BB72E9;
+    --color-blue: #3996DB;
+    --color-green: #82BC4F;
+    --color-yellow: #EABD5F;
+
+    /** CORES BASE / NEUTRAS
+   * Usadas para textos, fundos, bordas e elementos de UI gerais.
+   */
+    --gray-100: #E2E4E9;
+    --gray-200: #C0C4CE;
+    --gray-300: #878EA1;
+    --gray-400: #292C34;
+    --gray-500: #16181D;
+    --gray-600: #0D0E11;
+
+
+    /*
+  |--------------------------------------------------------------------------
+  | TIPOGRAFIA
+  |--------------------------------------------------------------------------
+  */
+
+    /** FAMÍLIAS DE FONTE (FONT FAMILY) */
+    --font-family-title: 'Asap', sans-serif;
+    --font-family-subtitle: 'Inconsolata', monospace;
+    --font-family-text: 'Maven Pro', sans-serif;
+
+    /** TAMANHOS DE FONTE (FONT SIZE) */
+    --font-size-title-lg: 56px;
+    --font-size-title-md: 24px;
+    --font-size-title-sm: 16px;
+    --font-size-subtitle: 20px;
+    --font-size-text-md: 16px;
+    --font-size-text-sm: 14px;
+
+    /** PESOS DE FONTE (FONT WEIGHT) */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /** ALTURA DA LINHA (LINE HEIGHT) */
+    /* Usamos valores sem unidade para melhor responsividade */
+    --line-height-tight: 1.2;
+    /* 120% */
+    --line-height-normal: 1.4;
+    /* 140% */
+}
+
+.gray-100 {
+    color: var(--gray-100);
+}
+.gray-300 {
+    color: var(--gray-300);
+}
+.gray-200 {
+    color: var(--gray-200);
+}
+.gray-600 {
+    color: var(--gray-600);
+}
+.color-red{
+    color: var(--color-red);
+}
+.bg-red{
+    background-color: var(--color-red);
+}
+.grid-pc {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.color-purple {
+    color: var(--color-purple);
+}
