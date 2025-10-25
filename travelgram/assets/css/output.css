@@ -177,11 +177,20 @@
   .m-auto {
     margin: auto;
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-\[50px\] {
     margin-top: 50px;
   }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -192,26 +201,8 @@
   .h-\[150px\] {
     height: 150px;
   }
-  .h-\[160px\] {
-    height: 160px;
-  }
-  .h-\[176px\] {
-    height: 176px;
-  }
-  .h-\[220px\] {
-    height: 220px;
-  }
-  .h-\[280px\] {
-    height: 280px;
-  }
   .h-\[286px\] {
     height: 286px;
-  }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-  .w-\[16px\] {
-    width: 16px;
   }
   .w-\[20\%\] {
     width: 20%;
@@ -221,18 +212,6 @@
   }
   .w-\[150px\] {
     width: 150px;
-  }
-  .w-\[160px\] {
-    width: 160px;
-  }
-  .w-\[176px\] {
-    width: 176px;
-  }
-  .w-\[220px\] {
-    width: 220px;
-  }
-  .w-\[280px\] {
-    width: 280px;
   }
   .w-\[286px\] {
     width: 286px;
@@ -264,6 +243,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -285,12 +267,6 @@
   }
   .border-red-400 {
     border-color: var(--color-red-400);
-  }
-  .border-b-red-400 {
-    border-bottom-color: var(--color-red-400);
-  }
-  .bg-neutral-50 {
-    background-color: var(--color-neutral-50);
   }
   .bg-neutral-100 {
     background-color: var(--color-neutral-100);
@@ -316,9 +292,6 @@
   .text-neutral-500 {
     color: var(--color-neutral-500);
   }
-  .text-neutral-600 {
-    color: var(--color-neutral-600);
-  }
   .text-neutral-700 {
     color: var(--color-neutral-700);
   }
@@ -337,6 +310,31 @@
       @media (hover: hover) {
         color: var(--color-neutral-700);
       }
+    }
+  }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:w-\[20\%\] {
+    @media (width >= 48rem) {
+      width: 20%;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
     }
   }
 }
