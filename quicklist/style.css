@@ -1,0 +1,175 @@
+/* Importa Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Define Inter como padrão global */
+html {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            sans-serif;
+}
+
+
+:root {
+      --background-primary: #F4F5FB;
+      --background-secondary: #FFFFFF;
+
+      --color-brand: #CA3884;
+      --color-brand-hover: #A52C6B;
+      --color-danger: #C93847;
+
+      --content-primary: #080B12;
+      --content-secondary: #374151;
+      --content-tertiary: #9CA3AF;
+      --always-white: #FFFFFF;
+
+      --border-primary: #D1D5DB;
+      --border-hover: #B9C2D0;
+}
+
+.btn-primary {
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      border: none;
+      width: 50%;
+      background-color: #CA3884;
+      /* color-brand */
+      color: #FFFFFF;
+      /* always-white */
+      font-weight: 500;
+      font-size: 0.9375rem;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.btn-primary:hover {
+      background-color: #A52C6B;
+      /* color-brand-hover */
+      transform: translateY(-1px);
+}
+
+.field {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      width: 100%;
+}
+
+.input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: .5rem;
+      border: 1px solid #D1D5DB;
+      /* border-primary - default */
+      background-color: #FFFFFF;
+      box-sizing: border-box;
+      color: #080B12;
+      /* content-primary */
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input::placeholder {
+      color: #9CA3AF;
+      /* content-tertiary */
+}
+
+.input:hover {
+      border-color: #B9C2D0;
+      /* border-hover */
+}
+
+.input:focus {
+      border-color: #CA3884;
+      /* color-brand */
+      box-shadow: 0 0 0 1px #CA3884;
+}
+
+.checkbox {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      color: #080B12;
+      width: 100%;
+}
+
+.checkbox-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+}
+
+.checkbox-control {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid #D1D5DB;
+      background-color: #FFFFFF;
+      display: inline-block;
+      box-sizing: border-box;
+      transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+/* Hover (com input ainda desmarcado) */
+.checkbox:hover .checkbox-control {
+      border-color: #B9C2D0;
+}
+
+/* Selected/checked */
+.checkbox-input:checked+.checkbox-control {
+      background-color: #CA3884;
+      border-color: #CA3884;
+}
+
+/* HEADER */
+
+body {
+      max-width: 768px;
+      margin: 0 auto;
+}
+
+header {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+}
+
+main {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      margin-top: 4rem;
+      gap: 1rem;
+
+      & .adicionar-item {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: end;
+            gap: 1rem;
+      }
+
+}
+
+.itens {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      gap: 1rem;
+      background-color: rgb(253, 225, 243);
+      border-radius: .5rem;
+      padding: .5rem 1rem;
+}
+
+#listTodo {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+      margin-top: 2rem;
+}

@@ -214,4 +214,6 @@ console.log(e_email || password)
 // oposto de verdadeiro
 console.log(!password)
 
+// DOM DOCUMENT OBJECT MODEL
+
 

@@ -1,0 +1,82 @@
+/* Container Principal */
+.mystery-text-container {
+      /* Define o fundo e centraliza o texto */
+      background-color: var(--color-shape-base);
+      /* Fundo escuro */
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      /* Necessário para posicionar as imagens laterais */
+}
+
+/* Estilo do Parágrafo Base */
+.mystery-text-container .anim-frase {
+      color: var(--color-text-body);
+      /* Cor base do texto */
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      max-width: 60rem;
+      margin: 1rem auto;
+}
+
+/* ------------------------------------- */
+/* ESTADO DEFAULT (Pré-Hover / Etapa 0) */
+/* ------------------------------------- */
+
+/* Destaques de Texto: Escuros e sem ênfase (começam com cor-base ou mais escura) */
+.anim-destaque {
+      font-weight: 700;
+      color: var(--color-pink-low);
+      transition: color 0.4s ease;
+}
+
+.icon-left,
+.icon-right {
+      position: absolute;
+      width: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.icon-left {
+      bottom: 30px;
+      left: 20%;
+}
+
+.icon-right {
+      bottom: 30px;
+      right: 20%;
+}
+
+.icon-center {
+      width: 80px;
+      margin-bottom: 1rem;
+}
+
+
+.mystery-text-container:hover .anim-destaque {
+      color: var(--color-blue-light);
+}
+
+.mystery-text-container:hover .icon-left {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.3s;
+}
+
+.mystery-text-container:hover .icon-right {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.6s;
+}
+
+.mystery-text-container:hover .etapa-2 {
+      color: var(--color-blue-light);
+      transition-delay: 0.3s;
+}
+
+.mystery-text-container:hover .etapa-3 {
+      color: var(--color-blue-light);
+      transition-delay: 0.6s;
+}

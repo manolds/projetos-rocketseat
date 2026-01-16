@@ -1,0 +1,159 @@
+*,
+*::after,
+*::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+:root {
+      /* * PINK PALETTE
+   */
+      --color-pink-light: #C59DDE;
+      --color-pink-base: #9547A5;
+      --color-pink-dark: #7D298A;
+      --color-pink-low: #3F0F41;
+
+      /* * BLUE PALETTE
+   */
+      --color-blue-light: #73B6D2;
+      --color-blue-base: #358BB9;
+      --color-blue-mid: #2374A4;
+      --color-blue-dark: #144A72;
+      --color-blue-low: #08233C;
+
+      /* * SHAPE/BACKGROUND PALETTE
+   */
+      --color-shape-stroke: #002347;
+      --color-shape-hover: #001933;
+      --color-shape-base: #000F1F;
+      --color-shape-background: #00050A;
+
+      /* * TEXT PALETTE
+   */
+      --color-text-title: #F8FBFB;
+      --color-text-body: #E2E7E9;
+      --color-text-label: #BAC6C9;
+}
+
+.raleway {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+}
+
+/*
+ * ESTILOS BASE COMPARTILHADOS POR TODOS OS BOTÕES
+ */
+.button {
+      /* Remove estilos de navegador padrão */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      cursor: pointer;
+
+      /* Configurações de tipografia */
+      font-family: inherit;
+      /* Garante que usa a fonte global */
+      font-size: 1rem;
+      font-weight: 600;
+      /* Exemplo: Títulos costumam ser mais pesados */
+      line-height: 1.5;
+
+      /* Configurações de layout e espaçamento */
+      padding: 0.75rem 1.5rem;
+      /* Padding interno (altura x largura) */
+      border-radius: 8px;
+      /* Exemplo de borda arredondada */
+
+      /* Transição suave para estados de hover */
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*
+ * 1. PRIMARY BUTTON (primary / default)
+ * Cores principais de ação (Pink Base)
+ */
+.button-primary {
+      background-color: var(--color-pink-base);
+      color: var(--color-text-title);
+      /* Texto branco/claro */
+}
+
+/*
+ * 1.1. PRIMARY BUTTON HOVER (primary / hover)
+ * Efeito de hover (Pink Dark - mais escuro)
+ */
+.button-primary:hover {
+      background-color: var(--color-pink-dark);
+      /* Sombra para efeito visual mais robusto */
+      box-shadow: 0 4px 10px rgba(149, 71, 165, 0.4);
+      /* Sombra suave usando a cor base */
+}
+
+
+/*
+ * 2. SECONDARY BUTTON (secondary / default)
+ * Cores secundárias de ação (Blue Mid)
+ */
+.button-secondary {
+      background-color: var(--color-blue-mid);
+      color: var(--color-text-title);
+      /* Texto branco/claro */
+}
+
+/*
+ * 2.1. SECONDARY BUTTON HOVER (secondary / hover)
+ * Efeito de hover (Blue Dark - mais escuro)
+ */
+.button-secondary:hover {
+      background-color: var(--color-blue-dark);
+      /* Sombra para efeito visual mais robusto */
+      box-shadow: 0 4px 10px rgba(35, 116, 164, 0.4);
+      /* Sombra suave usando a cor mid */
+}
+
+/*
+ * ESTILOS BASE PARA LINKS SOCIAIS (ÍCONES)
+ */
+.social-link {
+      /* Define o tamanho e formato do "botão" do ícone */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      /* Largura do círculo/quadrado */
+      height: 40px;
+      /* Altura do círculo/quadrado */
+      border-radius: 50%;
+      /* Se quiser que seja um círculo */
+
+      /* Cor do fundo inicial (transparente ou fundo do ambiente) */
+      background-color: transparent;
+
+      /* Transição suave para cores e fundos */
+      transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/*
+ * 2.1. SOCIAL LINK DEFAULT
+ * Usa a cor blue-mid para o ícone
+ */
+.social-link-default {
+      color: var(--color-blue-mid);
+      font-size: 1.25rem;
+      /* Tamanho do ícone */
+}
+
+/*
+ * 2.2. SOCIAL LINK HOVER
+ * Altera a cor do fundo e do ícone no hover
+ */
+.social-link-default:hover {
+      /* Usa a cor blue-base para o ícone no hover */
+      color: var(--color-blue-base);
+      /* Usa o fundo mais escuro (shape-hover) para o efeito visual de clique */
+      background-color: var(--color-shape-hover);
+}
